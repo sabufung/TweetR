@@ -1,14 +1,14 @@
-package com.codepath.apps.restclienttemplate;
+package com.codepath.apps.restclienttemplate.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
+import com.codepath.apps.restclienttemplate.R;
+import com.codepath.apps.restclienttemplate.networks.RestClient;
 import com.codepath.oauth.OAuthLoginActionBarActivity;
-import com.codepath.oauth.OAuthLoginActivity;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class LoginActivity extends OAuthLoginActionBarActivity<RestClient> {
 
@@ -39,6 +39,7 @@ public class LoginActivity extends OAuthLoginActionBarActivity<RestClient> {
 	@Override
 	public void onLoginFailure(Exception e) {
 		e.printStackTrace();
+		Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
 	}
 
 	// Click handler method for the button used to start OAuth flow

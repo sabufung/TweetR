@@ -1,11 +1,15 @@
-package com.codepath.apps.restclienttemplate;
+package com.codepath.apps.restclienttemplate.networks;
 
+import com.codepath.apps.restclienttemplate.R;
+import com.facebook.stetho.Stetho;
 import com.raizlabs.android.dbflow.config.FlowConfig;
 import com.raizlabs.android.dbflow.config.FlowLog;
 import com.raizlabs.android.dbflow.config.FlowManager;
 
 import android.app.Application;
 import android.content.Context;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /*
  * This is the Android application itself and is used to configure various settings
@@ -22,9 +26,18 @@ public class RestApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		Stetho.initializeWithDefaults(this);
+
+		CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+				.setDefaultFontPath("fonts/helveticaneue/HelveticaNeue Medium.ttf")
+				.setFontAttrId(R.attr.fontPath)
+				.build()
+		);
 
 		FlowManager.init(new FlowConfig.Builder(this).build());
 		FlowLog.setMinimumLoggingLevel(FlowLog.Level.V);
+
+
 
 		RestApplication.context = this;
 	}

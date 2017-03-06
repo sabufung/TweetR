@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dsaasd"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/tvScreenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tvName"
+            android:text="wqeqw"
+            android:textColor="#CCC" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="dsaasd"
+            android:textColor="#ccc" />
+
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvScreenName"
+            android:autoLink="all"
+            android:text="adsadasdasd" />
+
+        <ImageView
+            android:id="@+id/ivThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvText"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitStart" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivThumbnail"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_gravity="left"
+                android:gravity="center_vertical">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/sbReply"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    app:sparkbutton_activeImage="@drawable/reply"
+                    app:sparkbutton_iconSize="30dp"
+                    app:sparkbutton_inActiveImage="@drawable/reply_inactive"
+                    app:sparkbutton_primaryColor="@color/spark_image_tint"
+                    app:sparkbutton_secondaryColor="@color/reply_active" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center_vertical">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/sbRetweet"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    app:sparkbutton_activeImage="@drawable/retweet"
+                    app:sparkbutton_iconSize="30dp"
+                    app:sparkbutton_inActiveImage="@drawable/retweet_inactive"
+                    app:sparkbutton_primaryColor="@color/spark_image_tint"
+                    app:sparkbutton_secondaryColor="@color/retweet_active" />
+
+                <TextView
+                    android:id="@+id/tvRetweet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="200"
+                    android:textAlignment="center" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center_vertical">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/sbFavorite"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    app:sparkbutton_activeImage="@drawable/favorite"
+                    app:sparkbutton_iconSize="30dp"
+                    app:sparkbutton_inActiveImage="@drawable/favorite_inactive"
+                    app:sparkbutton_primaryColor="@color/spark_image_tint"
+                    app:sparkbutton_secondaryColor="@color/favorite_active" />
+
+                <TextView
+                    android:id="@+id/tvFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="200"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

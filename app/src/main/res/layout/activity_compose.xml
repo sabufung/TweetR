@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_compose"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.apps.restclienttemplate.activities.ComposeActivity">
+
+    <ImageView
+        android:id="@+id/ibClose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_close_black_24dp" />
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop" />
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_toLeftOf="@id/ivAvatar"/>
+    <TextView
+        android:id="@+id/tvScreenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textColor="#ccc"
+        android:layout_below="@id/tvName"
+        android:layout_toLeftOf="@id/ivAvatar"/>
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:padding="7dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_limit"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:id="@+id/btnTweet"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/twitterGrey"
+            android:textColor="#FFF"
+            android:text="@string/tweet" />
+
+    </LinearLayout>
+
+    <EditText
+        android:gravity="top"
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:background="@android:color/transparent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:maxLength="140"
+        android:layout_below="@id/ivAvatar"
+        android:hint="@string/compose_placeholder" />
+
+
+</RelativeLayout>

@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 25
@@ -10,12 +11,15 @@ android {
         targetSdkVersion 25
     }
 
+    dataBinding {
+        enabled = true
+    }
+
     // Related to https://github.com/scribejava/scribejava/issues/480
     // Scribe expects Java 7 or this custom Apache library
     lintOptions {
         lintConfig rootProject.file('gradle/lint.xml')
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -35,6 +39,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
     compile 'com.codepath.libraries:android-oauth-handler:1.1.0'
     compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
     // Picasso for remote image loading
     compile 'com.squareup.picasso:picasso:2.5.2'
     // Android Async Http for sending async network requests
@@ -43,4 +48,32 @@ dependencies {
     annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
     compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
     compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+
+    //Parceler
+    compile 'org.parceler:parceler-api:1.1.6'
+    annotationProcessor 'org.parceler:parceler:1.1.6'
+
+    //ButterKnife UI binding
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //Glide load image
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    // If you want to use the GPU Filters
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0'
+
+    //Setting up font
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+
+    //spark effect button
+    compile 'com.github.varunest:sparkbutton:1.0.4'
+
+    //Debug DB and Networking
+    compile 'com.facebook.stetho:stetho:1.4.1'
+
+    //Video view
+    compile 'com.github.danylovolokh:video-player-manager:0.2.0'
+    compile 'com.github.danylovolokh:list-visibility-utils:0.2.0'
 }

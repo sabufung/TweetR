@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="reply_active">#15b6e9</color>
+    <color name="retweet_active">#11d087</color>
+    <color name="favorite_active">#e9154e</color>
+    <color name="spark_color">#FFF</color>
+    <color name="twitterGrey">#55acee</color>
+    <color name="twitterGreyDark">#e1e8ed</color>
+</resources>
