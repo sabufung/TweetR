@@ -6,13 +6,18 @@
     <data>
         <variable name="tweet" type="com.codepath.apps.restclienttemplate.models.Tweet"/>
     </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:padding="10dp"
         android:layout_height="wrap_content">
-
+        <include
+            android:id="@+id/iframe"
+            layout="@layout/twitter_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <RelativeLayout
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView

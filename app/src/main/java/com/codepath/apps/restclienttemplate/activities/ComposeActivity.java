@@ -38,7 +38,7 @@ import static android.R.attr.path;
 import static com.codepath.apps.restclienttemplate.R.id.etContent;
 import static com.codepath.apps.restclienttemplate.R.id.ibClose;
 import static com.codepath.apps.restclienttemplate.R.id.ivAvatar;
-import static com.codepath.apps.restclienttemplate.R.id.swipeContainer;
+//import static com.codepath.apps.restclienttemplate.R.id.swipeContainer;
 import static com.codepath.apps.restclienttemplate.R.id.tvLimit;
 import static com.codepath.apps.restclienttemplate.R.id.tvScreenName;
 
@@ -135,7 +135,4 @@ public class ComposeActivity extends BaseActivity {
 
     }
 
-    public void postTweet(String body) {
-
-    }
 }

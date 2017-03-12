@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Rest Client Template</string>
+    <string name="app_name">TweetR</string>
     <string name="login_label">Log in</string>
     <string name="compose_placeholder">What\'s happening?</string>
     <string name="tweet">Tweet</string>
     <string name="text_limit">140</string>
     <string name="title_retweet">RETWEETS</string>
     <string name="title_like">LIKES</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

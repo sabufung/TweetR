@@ -17,6 +17,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.codepath.apps.restclienttemplate.R;
 import com.codepath.apps.restclienttemplate.TweetItemClickListener;
+import com.codepath.apps.restclienttemplate.activities.ProfileActivity;
 import com.codepath.apps.restclienttemplate.activities.TweetDetailActivity;
 import com.codepath.apps.restclienttemplate.models.Medium;
 import com.codepath.apps.restclienttemplate.models.Tweet;
@@ -27,6 +28,7 @@ import com.varunest.sparkbutton.SparkButton;
 import com.varunest.sparkbutton.SparkEventListener;
 
 import org.json.JSONObject;
+import org.parceler.Parcels;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -138,6 +140,14 @@ public class TweetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                     viewHolder.ivThumbnail.setVisibility(View.INVISIBLE);
                 }
             }
+            viewHolder.ivAvatar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(context, ProfileActivity.class);
+                    i.putExtra("USER", Parcels.wrap(tweet.getUser()));
+                    context.startActivity(i);
+                }
+            });
         }
     }
 

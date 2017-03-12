@@ -80,6 +80,11 @@ public class User extends BaseModel{
             this.name = object.getString("name");
             this.screenName = object.getString("screen_name");
             this.profileImageUrl = object.getString("profile_image_url");
+            this.profileBackgroundImageUrl = object.getString("profile_background_image_url");
+            this.followersCount = object.getInt("followers_count");
+            this.description = object.getString("description");
+    this.friendsCount = object.getInt("friends_count");
+
 
         } catch (JSONException e) {
             e.printStackTrace();
